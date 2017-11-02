@@ -4,7 +4,6 @@ buildscript {
 
 plugins { id "io.spring.dependency-management" version "1.0.3.RELEASE" }
 
-//TODO: stuff naar subprojects moven
 allprojects {
     apply plugin: 'java'
     apply plugin: "io.spring.dependency-management"
@@ -22,10 +21,14 @@ subprojects {
     repositories {
         mavenCentral()
     }
+    dependencyManagement {
+        dependencies {
+            dependency "org.springframework:spring-context:4.3.12.RELEASE"
+        }
+    }
 }
 
 project('ivolunteer-infrastructure') {
-//    apply plugin: 'org.springframework.boot'
     dependencies {
         compile "com.google.guava:guava"
     }
