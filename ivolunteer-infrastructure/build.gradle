@@ -1,5 +1,16 @@
 //apply plugin: 'org.springframework.boot'
 
+plugins {
+    id "org.flywaydb.flyway" version "4.2.0"
+}
+
+flyway {
+    url = "jdbc:postgresql://localhost:5432/ivolunteer"
+    user = "ivolunteer_user"
+    password = "IVOLUNTEER"
+}
+
 dependencies {
     compile "org.springframework:spring-context"
+    compile "postgresql:postgresql"
 }

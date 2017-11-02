@@ -1,0 +1,5 @@
+dependencies {
+    compile project(':ivolunteer-domain-common')
+
+    compile "org.springframework:spring-context"
+}

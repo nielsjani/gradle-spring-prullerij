@@ -1,4 +1,6 @@
 rootProject.name = 'iVolunteer'
 include 'ivolunteer-infrastructure'
 include 'ivolunteer-war'
+include 'ivolunteer-event'
+include 'ivolunteer-domain-common'
 

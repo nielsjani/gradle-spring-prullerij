@@ -23,7 +23,8 @@ subprojects {
     }
     dependencyManagement {
         dependencies {
-            dependency "org.springframework:spring-context:4.3.12.RELEASE"
+            dependency "postgresql:postgresql:9.1-901-1.jdbc4"
+//            dependency "org.springframework:spring-context:4.3.12.RELEASE"
         }
     }
 }
