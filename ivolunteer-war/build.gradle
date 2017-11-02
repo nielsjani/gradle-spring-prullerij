@@ -1,0 +1,21 @@
+plugins {
+    id 'org.springframework.boot' version '1.5.8.RELEASE'
+}
+
+apply plugin: 'war'
+
+war {
+    baseName = 'iVolunteer'
+    version =  "${version}"
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-tomcat")
+
+    compile project(':ivolunteer-infrastructure')
+}
+
+bootRepackage {
+    mainClass = 'be.cegeka.ivolunteer.war.Application'
+}
