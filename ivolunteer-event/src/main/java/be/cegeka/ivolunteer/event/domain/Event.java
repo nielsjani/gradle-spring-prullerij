@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.util.Date;
+import java.util.UUID;
 
 @Entity
 @Table(name = "EVENT")
@@ -18,7 +19,10 @@ public class Event extends Persistable {
     @Column(name = "EINDDATUM", nullable = false)
     private Date einddatum;
 
+    private Event(){}
+
     private Event(EventBuilder builder) {
+        this.id = builder.id;
         this.name = builder.name;
         this.begindatum = builder.begindatum;
         this.einddatum = builder.einddatum;
@@ -40,6 +44,7 @@ public class Event extends Persistable {
         private String name;
         private Date begindatum;
         private Date einddatum;
+        private String id = UUID.randomUUID().toString();
 
         public static EventBuilder event() {
             return new EventBuilder();
