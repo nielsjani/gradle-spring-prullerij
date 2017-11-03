@@ -14,6 +14,9 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-tomcat")
 
     compile project(':ivolunteer-infrastructure')
+    compile project(':ivolunteer-event')
+    testCompile "com.jayway.restassured:rest-assured"
+
 }
 
 bootRepackage {

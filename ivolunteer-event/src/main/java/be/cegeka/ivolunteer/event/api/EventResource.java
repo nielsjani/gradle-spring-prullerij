@@ -11,7 +11,7 @@ import javax.inject.Inject;
 import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 
 @RestController
-@RequestMapping("api/events")
+@RequestMapping("/api/events")
 public class EventResource {
 
     @Inject

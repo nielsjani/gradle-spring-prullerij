@@ -1,5 +1,6 @@
 package be.cegeka.ivolunteer.war;
 
+import be.cegeka.ivolunteer.event.spring.EventConfig;
 import be.cegeka.ivolunteer.infrastructure.spring.InfrastructureConfig;
 import be.cegeka.ivolunteer.war.spring.WarConfig;
 import org.springframework.boot.SpringApplication;
@@ -10,7 +11,8 @@ import org.springframework.context.annotation.Import;
 @EnableAutoConfiguration
 @Import({
         WarConfig.class,
-        InfrastructureConfig.class
+        InfrastructureConfig.class,
+        EventConfig.class
 })
 public class Application extends SpringBootServletInitializer {
 
