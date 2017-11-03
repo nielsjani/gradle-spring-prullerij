@@ -4,4 +4,5 @@ include 'ivolunteer-war'
 include 'ivolunteer-event'
 include 'ivolunteer-domain-common'
 include 'ivolunteer-e2e-tests'
+include 'ivolunteer-ui'
 
